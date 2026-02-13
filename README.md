@@ -66,3 +66,4 @@ Focuses on high-impact venues and rivalries, combining Top-N analysis and slicer
 - Author: Visura Rodrigo
 - Role: Undergraduate Data Science & Business Analytics student building industry-focused BI portfolios.
 - Contact: visurarodrigo@gmail.com | https://www.linkedin.com/in/visura-rodrigo
+- License: MIT License (see LICENSE for terms).
