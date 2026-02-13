@@ -1,69 +1,73 @@
+# Sri Lanka International Cricket Performance – Power BI Dashboard
+Industry-ready Power BI case study by Visura Rodrigo combining custom cricket data, disciplined modeling, and interview-focused storytelling.
+
 ## 1. Project Overview
-Sri Lanka International Cricket Performance – Power BI Dashboard is a recruiter-ready BI asset designed by Visura Rodrigo, an undergraduate Data Science & Business Analytics student. The dashboard consolidates 20+ years of Sri Lanka’s international cricket results into three audience-friendly pages to highlight match performance patterns, contextual storytelling, and practical BI craftsmanship suitable for internship and junior analyst interviews.
+Sri Lanka International Cricket Performance – Power BI Dashboard encapsulates over two decades of match history into an accessible, decision-focused experience. Built specifically to showcase internship and junior analyst capabilities, the solution emphasizes transparent metrics, governed slicer experiences, and concise narratives that hiring managers can review in minutes.
 
 ## 2. Dataset Description
 - Source: This project uses a custom dataset created and published by me on Kaggle.
 - Kaggle link: https://www.kaggle.com/datasets/visurarodrigo/sri-lanka-international-cricket-matches-2000pre
-- Grain: One row represents a single Sri Lanka international match between 2000 and the present.
-- Coverage: ODI, T20I, and Test fixtures with match metadata, opponent, venue, and result fields optimized for BI consumption.
-- Preparation: Match-level scorecards were collected from Cricsheet, standardized in Python, structured for BI, and refreshed via Power Query.
+- Grain: One row = one Sri Lanka international match (2000–present) spanning ODI, T20I, and Test formats.
+- Preparation flow: Raw Cricsheet scorecards → Python cleaning & standardization → BI-ready schema design → Power Query refresh pipeline.
+- Notes: Venue metadata was enriched to support dependable Home/Away logic and downstream Win % calculations.
 
 ## 3. Tools & Technologies
-- Power BI Desktop for modeling, DAX, and dashboard design.
-- Power Query for ETL, validation, and venue-based Home/Away corrections.
-- DAX for reusable KPIs such as Win %, Run Rate, Top-N opponent breakdowns, and dynamic slicer reactions.
-- GitHub for version control and portfolio presentation.
+- Power BI Desktop for modeling, page design, and delivery.
+- Power Query for ETL, column typing, venue-based Home/Away corrections, and quality gates.
+- DAX for standardized KPIs (Win %, Run Rate, Top-N insights, slicer-aware measures, interaction locks).
+- GitHub for version control, documentation, and recruiter sharing.
 
 ## 4. Data Modeling & Preparation
-- Star-schema mindset with Fact Matches linked to dimension tables (Date, Opponent, Venue, Format).
-- Dedicated Date table ensures reliable time intelligence calculations.
-- Measures stored centrally in a Measures table for governance and reuse.
-- Power Query steps handle schema enforcement, numeric typing, and venue-driven Home vs Away flag corrections to resolve supplier data gaps.
-- Python preprocessing established consistent team names and primary keys before ingestion.
+- Fact Matches table linked to Date, Opponent, Venue, and Format dimensions to maintain a star-schema discipline.
+- Dedicated Date table unlocks time intelligence (rolling Win %, YoY deltas, seasonality diagnostics).
+- Central Measures table stores all calculations, improving discoverability and reuse during new page builds.
+- Power Query handles schema enforcement, numeric coercion, and venue-driven Home/Away overrides to resolve supplier inconsistencies.
+- Python preprocessing ensures consistent opponent naming, match IDs, and field selections before ingestion into Power BI.
 
 ## 5. Dashboard Pages & Insights
 ### Overview
-- Macro-level view of Win %, match volume, and run-rate trends segmented by year, format, and location to support executive briefs.
+- Executive-ready snapshot of Win %, match volume, and run-rate trends segmented by year, format, and geography to frame Sri Lanka’s long-term trajectory.
 
 ### Format Analysis
-- Deep dive into ODI, T20I, and Test splits with format-specific DAX metrics, highlighting momentum swings, batting vs bowling impact, and head-to-head success rates.
+- Drill-down into ODI, T20I, and Test performance with reusable format-specific measures surfacing momentum swings, batting vs bowling splits, and head-to-head comparison points.
 
 ### Opponent & Venue Analysis
-- Top-N visuals isolate most frequent opponents and venues, layering Home/Away context, crowd leverage, and slicer-driven insights for pre-tour planning.
+- Top-N visuals spotlight priority opponents and venues, layering Home/Away splits, crowd leverage, and slicer-driven diagnostics to inform tour preparation.
 
 ### Overview Page
 ![Overview Page](Dashboard/Screenshots/Overview%20Page.jpg)
-Professional summary of Sri Lanka’s overall performance, Win %, and recent form, with locked interactions to protect narrative flow.
+Curated executive summary with locked interactions, spotlighting Win %, match pace, and recent form across formats without overwhelming stakeholders.
 
 ### Format Analysis Page
 ![Format Analysis Page](Dashboard/Screenshots/Format%20Analysis%20Page.jpg)
-Comparative visuals showing how Sri Lanka fares across formats, including DAX-driven metrics per opponent and season for analyst briefings.
+Side-by-side format narratives combining DAX-driven KPIs, seasonal context, and comparative cards to evidence analytical depth.
 
 ### Opponent & Venue Analysis Page
 ![Opponent & Venue Analysis Page](Dashboard/Screenshots/Opponent%20%26%20Venue%20Analysis.jpg)
-Focuses on high-impact venues and rivalries, combining Top-N analysis and slicers so decision-makers can quickly evaluate touring priorities.
+Top-N opponent and venue breakdown with adjustable slicers, highlighting where Sri Lanka extracts the most advantage and where strategies must adapt.
 
 ## 6. Key BI Skills Demonstrated
-- Clean, auditable data preparation pipelines using Power Query.
-- Correct BI modeling with dedicated Date and Measures tables and a star-schema-ready mindset.
-- Robust DAX practices covering Win %, Home vs Away logic, and Top-N opponent/venue calculations.
-- Interaction-locked dashboards that balance slicer control with guided storytelling.
-- Business-focused insight framing suited for leadership reviews and interviews.
+- Power Query-based data remediation, including venue-driven Home/Away corrections and auditable refresh logic.
+- Star-schema modeling with a dedicated Date table and governed Measures table.
+- DAX craftsmanship covering Win %, Run Rate, Top-N selections, and interaction-aware calculations for locked narratives.
+- Insightful storytelling that guides viewers through slicer-driven yet controlled experiences.
+- Portfolio-friendly documentation and Git-based project packaging.
 
 ## 7. Repository Structure
-- README.md – Project documentation and usage guide.
-- Dashboard/Power BI/ – Power BI Desktop artifacts (PBIX, templates, export files).
-- Dashboard/Screenshots/ – PNG captures used in this README for recruiters.
-- Dataset/ – Cleaned CSV published on Kaggle plus supplementary metadata.
+- README.md – Project documentation and recruiter briefing (this file).
+- Dashboard/Power BI/ – PBIX and supporting Power BI assets.
+- Dashboard/Screenshots/ – JPEG captures referenced in the Dashboard Pages section.
+- Dataset/ – Clean CSV published on Kaggle plus supporting metadata.
+- LICENSE – MIT License granting usage rights.
 
 ## 8. How to Use This Project
-1. Clone the repository and open the Power BI Desktop file inside Dashboard/Power BI/.
-2. Place the dataset CSV (Dataset/sri_lanka_international_cricket_matches_2000_present_clean.csv) in the same folder or update the data source path.
-3. Refresh the model to trigger Power Query steps, ensuring venue-based Home/Away corrections run before DAX evaluates Win %.
-4. Explore the three dashboard pages using slicers; interactions are intentionally locked to preserve analytical narratives.
+1. Clone the repository and open the PBIX file inside Dashboard/Power BI/.
+2. Ensure Dataset/sri_lanka_international_cricket_matches_2000_present_clean.csv is accessible (adjust the data source path if necessary).
+3. Refresh the model so Power Query runs venue-based corrections and schema validations before DAX evaluates Win % and Run Rate measures.
+4. Navigate the three dashboard pages; slicer interactions are intentionally locked to keep the story coherent during demos.
 
 ## 9. Author & Contact
 - Author: Visura Rodrigo
-- Role: Undergraduate Data Science & Business Analytics student building industry-focused BI portfolios.
+- Role: Undergraduate Data Science & Business Analytics student developing industry-focused BI portfolios.
 - Contact: visurarodrigo@gmail.com | https://www.linkedin.com/in/visura-rodrigo
 - License: MIT License (see LICENSE for terms).
