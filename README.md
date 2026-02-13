@@ -32,15 +32,15 @@ Sri Lanka International Cricket Performance – Power BI Dashboard is a recruite
 - Top-N visuals isolate most frequent opponents and venues, layering Home/Away context, crowd leverage, and slicer-driven insights for pre-tour planning.
 
 ### Overview Page
-![Overview Page](Screenshots/Overview.png)
+![Overview Page](Dashboard/Screenshots/Overview%20Page.jpg)
 Professional summary of Sri Lanka’s overall performance, Win %, and recent form, with locked interactions to protect narrative flow.
 
 ### Format Analysis Page
-![Format Analysis Page](Screenshots/Format_Analysis.png)
+![Format Analysis Page](Dashboard/Screenshots/Format%20Analysis%20Page.jpg)
 Comparative visuals showing how Sri Lanka fares across formats, including DAX-driven metrics per opponent and season for analyst briefings.
 
 ### Opponent & Venue Analysis Page
-![Opponent & Venue Analysis Page](Screenshots/Opponent_Venue.png)
+![Opponent & Venue Analysis Page](Dashboard/Screenshots/Opponent%20%26%20Venue%20Analysis.jpg)
 Focuses on high-impact venues and rivalries, combining Top-N analysis and slicers so decision-makers can quickly evaluate touring priorities.
 
 ## 6. Key BI Skills Demonstrated
